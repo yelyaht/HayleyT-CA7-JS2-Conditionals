@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Hayley Tymony">
+  <title>Bear Ninja Hunter - Conditionals</title>
+</head>
+<body>
+  <h1>Bear Ninja Hunter</h1>
+  <p id="gameOutput">Game results will appear here.</p>
+
+  <script>
+    // Ask the user for their name and assign it to a variable
+    let userName = prompt("Welcome to Bear Ninja Hunter! Enter your name at your own risk.");
+
+    // Ask the user for their game choice and assign it
+    let userChoice = prompt("Choose Bear, Ninja, or Hunter:");
+
+    // Hard-code the computer's choice to "Bear"
+    let computerChoice = "Bear";
+
+    // Create the welcome message
+    let welcomeMessage = "Welcome " + userName + "!";
+
+    // Create a variable to hold the result of the game
+    let gameResult = "";
+
+    // Use if/else if/else to determine the outcome of the game
+    if (userChoice === "Bear" && computerChoice === "Bear") {
+      gameResult = "It's a Tie!";
+    } else if (userChoice === "Ninja" && computerChoice === "Ninja") {
+      gameResult = "It's a Tie!";
+    } else if (userChoice === "Hunter" && computerChoice === "Hunter") {
+      gameResult = "It's a Tie!";
+    } else if (userChoice === "Bear" && computerChoice === "Ninja") {
+      gameResult = "You Win!";
+    } else if (userChoice === "Ninja" && computerChoice === "Hunter") {
+      gameResult = "You Win!";
+    } else if (userChoice === "Hunter" && computerChoice === "Bear") {
+      gameResult = "You Win!";
+    } else if (userChoice === "Hunter" && computerChoice === "Ninja") {
+      gameResult = "Computer Wins!";
+    } else if (userChoice === "Bear" && computerChoice === "Hunter") {
+      gameResult = "Computer Wins!";
+    } else if (userChoice === "Ninja" && computerChoice === "Bear") {
+      gameResult = "Computer Wins!";
+    } else {
+      gameResult = "Invalid input.";
+    }
+
+    // Use a switch statement to output a fun themed message based on the user’s choice
+    let characterMessage = "";
+
+    switch (userChoice) {
+      case "Bear":
+        characterMessage = "You chose Bear. Strong and fierce!";
+        break;
+      case "Ninja":
+        characterMessage = "You chose Ninja. Swift and silent!";
+        break;
+      case "Hunter":
+        characterMessage = "You chose Hunter. Steady and precise!";
+        break;
+      default:
+        characterMessage = "That's not a valid character... yet!";
+    }
+
+    // Combine messages using concatenation
+    let finalMessage = welcomeMessage + " " + characterMessage + " The computer chose " + computerChoice + ". " + gameResult;
+
+    // Output 1: display in the page using innerHTML
+    document.getElementById("gameOutput").innerHTML = finalMessage;
+
+    // Output 2: alert to show in a popup
+    alert(finalMessage);
+
+    // Log result for reference (optional, not required by assignment)
+    console.log(finalMessage);
+  </script>
+</body>
+</html>
