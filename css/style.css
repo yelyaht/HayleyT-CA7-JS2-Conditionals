@@ -1,8 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #e8f4f8;
-  margin-top: 50px;
+  font-family: Intel One Mono, Light 300 Italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  margin: 0;
+  background-color: #a246e0;
 }
 
 input {
